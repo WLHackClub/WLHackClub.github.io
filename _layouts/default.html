@@ -4,8 +4,8 @@
     <title> {{ page.title }} • WL Hack Club </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="WL Hack Club">
+    <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description }} {% endif %}">
+    <meta name="author" content="{{ site.author }}">
     <meta name="theme-color" content="#D59F0F">
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
 
@@ -50,9 +50,9 @@
 
     <footer class="footer-format">
       <div class="container py-5 col-12 col-md">
-      <img src= "../assets/icon.png" alt="WL Hack Club Logo" height="64px">
-      <small class="d-block mb-3 text-muted">&copy; 2023</small>
-      <small class="d-block mb-3 text-muted">Site by Johnny Shen, Eugene Zhang, Aneesh Terani, Geeson Wan<span style="float: right"><a href="https://github.com/WLHackClub/WLHackClub.github.io" target="_blank">Source code</a></span></small>
+        <img src= "../assets/icon.png" alt="WL Hack Club Logo" height="64px">
+        <small class="d-block mb-3 text-muted">&copy; {{ site.time | date: '%Y' }}</small>
+        <small class="d-block mb-3 text-muted">Site by {{ site.author }}<span style="float: right"><a href="https://github.com/WLHackClub/WLHackClub.github.io" target="_blank">Source code</a></span></small>
       </div>
     </footer>
 

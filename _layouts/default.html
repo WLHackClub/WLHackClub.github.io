@@ -4,7 +4,7 @@
     <title> {{ page.title }} • WL Hack Club </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description }} {% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
     <meta name="theme-color" content="#D59F0F">
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
@@ -24,9 +24,9 @@
   </head>
 
   <body>
-    <header class="site-header sticky-top py-1">
-      <nav class="navbar bg-light navbar-expand-lg sticky-top p-1 shadow">
-        <a class="navbar-brand px-2 text-primary" href="/index.html">
+    <header class="site-header sticky-top">
+      <nav class="navbar bg-light navbar-expand-lg sticky-top p-1">
+        <a class="navbar-brand px-2 text-primary" href="{{ site.url }}">
           <img src="../assets/icon.png" alt="WL Hack Club Logo" height="36px">
           <b>WL Hack Club</b>
         </a>
@@ -38,13 +38,16 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item item">
-              <a class="nav-link text-primary" href="/index.html">Home</a>
+              <a class="nav-link text-primary" href="{{ site.url }}">Home</a>
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link text-primary" href="/projects">Projects</a>
             </li>
         </div>
       </nav>
     </header>
 
-    <main style="margin: 25px">
+    <main class="page-wrapper" style="margin: 25px">
       {{ content }}
     </main>
 
@@ -55,6 +58,5 @@
         <small class="d-block mb-3 text-muted">Site by {{ site.author }}<span style="float: right"><a href="https://github.com/WLHackClub/WLHackClub.github.io" target="_blank">Source code</a></span></small>
       </div>
     </footer>
-
   </body>
 </html>

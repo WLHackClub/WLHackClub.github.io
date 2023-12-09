@@ -13,3 +13,12 @@
     flex: 1;
     min-height: 63.5vh;
 }
+
+.bi {
+    vertical-align: 0.125em;
+}
+
+.default-img {
+    width: 100%;
+    height: auto;
+}

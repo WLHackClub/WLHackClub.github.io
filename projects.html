@@ -22,12 +22,12 @@ layout: default
       {% unless forloop.first %}
         <div class="col-sm-4" style="margin-bottom: 15px">
           <div class="card h-100">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">{{ post.title }}</h5>
               <p class="text-secondary" style="margin-right: 10px;">{{ post.date | date: '%D' }}</p>
               <p class="card-text">{{ post.description }}</p>
               <!-- TODO: align the button at the bottom -->
-              <a href="{{ post.url }}" class="btn btn-primary">Learn More</a>
+                <a href="{{ post.url }}" class="btn btn-primary mt-auto me-auto">Learn More</a>
             </div>
           </div>
         </div>

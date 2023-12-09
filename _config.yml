@@ -1,3 +1,5 @@
 title: WL Hack Club 
 description: Official West Side Hack Club Website 
 author: Johnny Shen, Aneesh Terani, Geeson Wan, Eugene Zhang
+
+permalink: /:categories/:title

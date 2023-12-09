@@ -1,0 +1,35 @@
+---
+title: Projects
+permalink: /projects.html
+layout: default
+---
+
+<div class="container">
+
+  <h1>Projects</h1>
+
+  <div class="card" style="margin-top: 35px; margin-bottom: 35px;">
+    <div class="card-body">
+      <h4 class="card-title">Current Project</h4>
+      <h5>{{ site.categories.projects.first.title }}</h5>
+      <p class="card-text">{{ site.categories.projects.first.description }}</p>
+      <a href="{{ site.categories.projects.first.url }}" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 15px">
+    {% for post in site.categories.projects %}
+      {% unless forloop.first %}
+        <div class="col-sm-4" style="margin-bottom: 15px">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.description }}</p>
+              <a href="{{ post.url }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

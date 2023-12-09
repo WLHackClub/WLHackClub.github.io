@@ -24,6 +24,7 @@ layout: default
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
+              <p class="text-secondary" style="margin-right: 10px;">{{ post.date | date: '%D' }}</p>
               <p class="card-text">{{ post.description }}</p>
               <a href="{{ post.url }}" class="btn btn-primary">Learn More</a>
             </div>

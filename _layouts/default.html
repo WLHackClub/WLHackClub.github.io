@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link href="{{ 'stylesheets/default.css' | relative_url }}" rel="stylesheet">
+    <script src="{{ 'script.js' | relative_url }}" defer></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse justify-content-between">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item item">
               <a class="nav-link text-primary" href="{{ site.url }}">Home</a>
@@ -48,6 +49,9 @@
               <a class="nav-link text-primary" href="/projects">Projects</a>
             </li>
           </ul>
+          <button class="nav-item btn" id="modeButton" style="border: none; outline: none; margin-right: 15px;">
+            <h5><i class="bi bi-brightness-high-fill" style="vertical-align: -0.125em"></i></h5>
+          </button>
         </div>
       </nav>
     </header>

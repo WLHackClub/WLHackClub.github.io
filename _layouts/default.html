@@ -7,7 +7,6 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
     <meta name="theme-color" content="#D59F0F">
-    <link rel="icon" type="image/x-icon" href="{{ 'assets/icon.png' | relative_url }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1/assets/css/atcb.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade">
@@ -29,7 +28,7 @@
     <header class="site-header sticky-top">
       <nav class="navbar bg-body-tertiary navbar-expand-lg sticky-top p-1">
         <a class="navbar-brand px-2 text-primary" href="{{ site.url }}">
-          <img src="{{ 'assets/icon.png' | relative_url }}" alt="WL Hack Club Logo" height="36px">
+          <img src="{{ 'assets/icon.svg' | relative_url }}" alt="WL Hack Club Logo" height="36px">
           <b>WL Hack Club</b>
         </a>
 
@@ -62,7 +61,7 @@
 
     <footer class="footer-format bg-body-tertiary">
       <div class="container py-5 col-12 col-md">
-        <img src= "{{ 'assets/icon.png' | relative_url }}" alt="WL Hack Club Logo" height="64px">
+        <img src="{{ 'assets/icon.svg' | relative_url }}" alt="WL Hack Club Logo" height="64px">
         <small class="d-block mb-3 text-muted">&copy; {{ site.time | date: '%Y' }}</small>
         <small class="d-block mb-3 text-muted">Site by {{ site.author }}<span style="float: right"><a href="https://github.com/WLHackClub/WLHackClub.github.io" target="_blank">Source code</a></span></small>
       </div>

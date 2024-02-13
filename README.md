@@ -24,3 +24,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 ```
+
+**Disclaimer:** The logos on this website that represent our sponsors for Hackathon, our club in general, and other events are not owned by us. Please seek permission from each company to use their respective logo.

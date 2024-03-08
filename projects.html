@@ -14,7 +14,7 @@ permalink: /projects/
       <div class="card-subtitle" style="margin-top: 10px; margin-bottom: 10px;">
         {% if site.categories.projects.first.tags %}
           {% for tag in site.categories.projects.first.tags %}
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-original.svg" width="32" height="32"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-original.svg" draggable=false width="32" height="32"/>
           {% endfor %}
         {% endif %}
       </div>
@@ -34,7 +34,7 @@ permalink: /projects/
               <div class="card-subtitle" style="margin-bottom: 5px;">
                 {% if post.tags %}
                   {% for tag in post.tags %}
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-original.svg" width="32" height="32"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-original.svg" draggable=false width="32" height="32"/>
                   {% endfor %}
                 {% endif %}
               </div>

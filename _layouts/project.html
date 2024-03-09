@@ -3,11 +3,18 @@ layout: default
 ---
 
 <div class="container">
-
   {% include breadcrumbs.html %}
   <br>
 
   <h1>{{ page.title }}</h1>
+
+  <div style="margin-top: 5px; margin-bottom: 5px;">
+    {% if site.categories.projects.first.tags %}
+      {% for tag in site.categories.projects.first.tags %}
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-{% if site.data.devicons[tag] %}{{ site.data.devicons[tag] }}{% else %}{{ 'original' }}{% endif %}.svg" draggable=false width="32" height="32"/>
+      {% endfor %}
+    {% endif %}
+  </div>
 
   <div style="margin-bottom: 16px">
     {{ page.description }}
@@ -26,9 +33,7 @@ layout: default
       Slides
     </a>
   {% endif %}
-
   <hr>
 
   {{ content }}
-
 </div>

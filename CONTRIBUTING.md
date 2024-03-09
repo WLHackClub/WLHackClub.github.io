@@ -32,11 +32,16 @@ Add the following header.
 title: <title of page>
 layout: project
 category: projects
+tags: [<programming language tags]
 description: <description of page>
 code_url: <url to source code>
 slides_url: <url to slides>
 ---
 ```
+
+**`title`, `layout`, and `category` are required fields, all others are optional**
+
+For the programming language tags, please visit https://devicon.dev/ for more information.
 
 Include the slides in pdf format in the `assets/projects/slides/` directory.
 
@@ -47,6 +52,7 @@ For example the header for the Personal Website project is:
 title: Personal Website
 layout: project
 category: projects
+tags: [html5, css3, javascript]
 description: Learn the basics of html and css and create your own personal website!
 code_url: https://replit.com/@TomasVargas-Ber/Website-Template-Modified-for-83023-Part-2
 slides_url: /assets/projects/slides/personal_website.pdf

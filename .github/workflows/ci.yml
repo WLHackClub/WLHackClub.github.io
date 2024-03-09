@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+
+jobs:
+  yarn:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install Packages
+        working-directory: .
+        run: yarn install
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: --write .
+          only_changed: True

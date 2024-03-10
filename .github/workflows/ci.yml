@@ -17,9 +17,8 @@ jobs:
         working-directory: .
         run: yarn install
 
-      - name: Prettier Action
+      - name: Prettier Check 
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_options: --write .
-          only_changed: True
+          prettier_options: --check .
           same_commit: True

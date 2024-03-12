@@ -32,7 +32,7 @@ Add the following header.
 title: <title of page>
 layout: project
 category: projects
-tags: [<programming language tags]
+tags: [<programming language tags>]
 description: <description of page>
 code_url: <url to source code>
 slides_url: <url to slides>

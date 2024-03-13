@@ -9,13 +9,13 @@ Self-test code locally. Make sure Ruby 2.5.0 or later is installed.
 - `bundler install`
 - `bundler exec jekyll serve`
 
-## Copyright 
+## Copyright
 
-This project is released under the [GNU General Public License v3](LICENSE). 
+This project is released under the [GNU General Public License v3](LICENSE).
 
 Parts of this project contains open source libraries licensed under the MIT License:
 
-- _includes/breadcrumbs.html (Jekyll Codex)
+- \_includes/breadcrumbs.html (Jekyll Codex)
 
 ```
 Copyright (c) 2020 Usecue BV

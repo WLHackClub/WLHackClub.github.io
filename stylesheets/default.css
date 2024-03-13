@@ -1,9 +1,9 @@
 .footer-format {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  color: black;
-  margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    margin-top: auto;
 }
 
 .page-wrapper {
@@ -23,8 +23,8 @@
 }
 
 .overflow-text {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }

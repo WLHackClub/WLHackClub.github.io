@@ -5,21 +5,22 @@
 Pull requests will not be accepted or viewed.
 
 ## General Guidelines
+
 ### Naming Conventions
 
 - All user created filenames should be in all lowercase.
 - Filename should only contain ascii characters and should not contain spaces.
-    - For html files dashes (`-`) are prefered
-    - For all other files use underscores (`_`)
+  - For html files dashes (`-`) are prefered
+  - For all other files use underscores (`_`)
 
 ### Formatting Conventions
 
 - Indentation
-    - `html` - 2 spaces
-    - `javascript` - 4 spaces
-    - `css` - 4 spaces
+  - `html` - 2 spaces
+  - `javascript` - 4 spaces
+  - `css` - 4 spaces
 
-## Project Guidelines 
+## Project Guidelines
 
 To update the projects list, create a new html file in the `_posts/` directory with the format `YYYY-MM-DD-<url>.html` with `YYYY-MM-DD` being the day the project is started.
 

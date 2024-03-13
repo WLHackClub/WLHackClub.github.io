@@ -17,7 +17,7 @@ jobs:
         working-directory: .
         run: yarn install
 
-      - name: Prettier Check 
+      - name: Prettier Check
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --check .

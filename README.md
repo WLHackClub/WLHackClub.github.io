@@ -4,8 +4,11 @@ The WL Hack Club Website is made using Jekyll, a static site generator in Ruby.
 
 ## Deployment
 
-Self-test code locally. Make sure Ruby 2.5.0 or later is installed.
+Make sure Ruby 2.5.0 or later and a relatively recent version of node.js and yarn is installed.
 
+To test the code locally on the server run
+
+- `yarn install`
 - `bundler install`
 - `bundler exec jekyll serve`
 

@@ -20,6 +20,12 @@ Pull requests will not be accepted or viewed.
   - `javascript` - 4 spaces
   - `css` - 4 spaces
 
+### Prettier
+
+Before pushing, run `yarn prettier --write .` in order to apply the correct formatting to each file.
+
+Or run `yarn prettier --check .` to check for files that require any formatting fixes.
+
 ## Project Guidelines
 
 To update the projects list, create a new html file in the `_posts/` directory with the format `YYYY-MM-DD-<url>.html` with `YYYY-MM-DD` being the day the project is started.

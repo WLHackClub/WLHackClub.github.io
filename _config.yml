@@ -4,6 +4,12 @@ logo: /assets/icon.svg
 
 permalink: /:categories/:title
 
+defaults:
+  - scope:
+      path: "assets/**/*.pdf"
+    values:
+      sitemap: false
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

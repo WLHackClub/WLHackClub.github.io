@@ -1,4 +1,9 @@
 title: WL Hack Club
-description: Official WL Hack Club Website
+description: Official website for the WL chapter of Hack Club.
+logo: /assets/icon.svg
 
 permalink: /:categories/:title
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

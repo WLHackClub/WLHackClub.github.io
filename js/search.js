@@ -28,7 +28,7 @@ input.addEventListener("input", () => {
             let tags_list = data[ref]["tags"];
             let tags = "";
             for (let j = 0; j < tags_list.length; j++) {
-                tags += `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tags_list[j]["name"]}/${tags_list[j]["name"]}-${tags_list[j]["type"]}.svg" draggable="false" oncontextmenu="return false;" width="32" height="32">`;
+                tags += `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tags_list[j]["name"]}/${tags_list[j]["name"]}-${tags_list[j]["type"]}.svg" draggable="false" oncontextmenu="return false;" width="32" height="32">\n`;
             }
             resultsDiv.innerHTML += `
                 <div class="col-sm-4" style="margin-bottom: 15px">

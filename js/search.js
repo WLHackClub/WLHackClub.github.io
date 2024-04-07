@@ -13,6 +13,11 @@ let idx = lunr(function () {
     }, this);
 });
 
+/*
+ * Modified version of the getResults function by Aaron Taylor licensed under Creative Common Attribution 4.0 International
+ * Link: https://raw.githubusercontent.com/kujenga/website/main/assets/js/search.jsx
+ * License: https://creativecommons.org/licenses/by/4.0/deed.en
+ */
 function get_results(query) {
     if (!query) {
         return [];

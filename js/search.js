@@ -1,5 +1,5 @@
 let input = document.getElementById("search");
-let resultsDiv = document.getElementById("search-results");
+let results_div = document.getElementById("search-results");
 let projects = document.getElementById("projects");
 
 let idx = lunr(function () {
@@ -44,12 +44,12 @@ function get_results(query) {
 input.addEventListener("input", () => {
     if (!input.value) {
         projects.hidden = false;
-        resultsDiv.hidden = true;
+        results_div.hidden = true;
         return;
     }
     projects.hidden = true;
-    resultsDiv.hidden = false;
-    resultsDiv.innerHTML = "";
+    results_div.hidden = false;
+    results_div.innerHTML = "";
     let results = get_results(input.value);
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
@@ -59,7 +59,7 @@ input.addEventListener("input", () => {
             for (let j = 0; j < tags_list.length; j++) {
                 tags += `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tags_list[j]["name"]}/${tags_list[j]["name"]}-${tags_list[j]["type"]}.svg" draggable="false" oncontextmenu="return false;" width="32" height="32">\n`;
             }
-            resultsDiv.innerHTML += `
+            results_div.innerHTML += `
                 <div class="col-sm-4" style="margin-bottom: 15px">
                   <div class="card h-100">
                     <div class="card-body d-flex flex-column">

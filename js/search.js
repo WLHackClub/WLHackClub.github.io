@@ -42,7 +42,7 @@ function get_results(query) {
 }
 
 input.addEventListener("input", () => {
-    if (input.value === "") {
+    if (!input.value) {
         projects.hidden = false;
         resultsDiv.hidden = true;
         return;

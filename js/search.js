@@ -1,0 +1,48 @@
+let input = document.getElementById("search");
+let resultsDiv = document.getElementById("search-results");
+let projects = document.getElementById("projects");
+
+let idx = lunr(function () {
+    this.ref("id");
+    this.field("title");
+    this.field("url");
+    this.field("date");
+    this.field("description");
+
+    data.forEach(function (doc) {
+        this.add(doc);
+    }, this);
+});
+
+input.addEventListener("input", () => {
+    if (input.value === "") {
+        projects.hidden = false;
+        resultsDiv.hidden = true;
+        return;
+    }
+    projects.hidden = true;
+    resultsDiv.hidden = false;
+    resultsDiv.innerHTML = "";
+    let results = idx.search(input.value);
+    if (results.length > 0) {
+        for (var i = 0; i < results.length; i++) {
+            let ref = results[i]["ref"];
+            let title = data[ref]["title"];
+            let url = data[ref]["url"];
+            let date = data[ref]["date"];
+            let description = data[ref]["description"];
+            resultsDiv.innerHTML += `
+                <div class="col-sm-4" style="margin-bottom: 15px">
+                  <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">${title}</h5>
+                      <p class="text-secondary" style="margin-right: 10px;">${date}</p>
+                      <p class="card-text overflow-text">${description}</p>
+                      <a href="${url}" class="btn btn-primary mt-auto me-auto">Learn More</a>
+                    </div>
+                  </div>
+              </div>
+            `;
+        }
+    }
+});

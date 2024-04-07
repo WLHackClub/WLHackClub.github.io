@@ -1,7 +1,7 @@
 {
   "devDependencies": {
+    "@shopify/liquid-html-parser": "^2.0.3",
     "@shopify/prettier-plugin-liquid": "^1.4.4",
-    "prettier": "^3.2.5",
-    "@shopify/liquid-html-parser": "^2.0.3"
+    "prettier": "^3.2.5"
   }
 }

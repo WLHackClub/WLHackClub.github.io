@@ -3,6 +3,26 @@ title: Projects
 layout: default
 permalink: /projects/
 ---
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  {% assign counter = 0 %}
+  var data = [
+    {% for post in site.categories.projects %}
+      {% unless forloop.first %}
+        {
+          "id": {{ counter }},
+          "title": "{{ post.title | escape }}",
+          "url": "{{ post.url }}",
+          "date": "{{ post.date | date: '%D' }}",
+          "description": "{{ post.description | escape }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% assign counter = counter | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+  ];
+</script>
+<script src="/js/search.js" defer></script>
+
 <div class="container">
   <h1>Projects</h1>
 
@@ -22,7 +42,13 @@ permalink: /projects/
     </div>
   </div>
 
-  <div class="row" style="margin-bottom: 15px">
+  <form onsubmit="return false;">
+    <input class="search-input" placeholder="Search" type="text" id="search">
+  </form>
+
+  <div class="row" style="margin-top: 15px; margin-bottom: 15px;" id="search-results" hidden="hidden"></div>
+
+  <div class="row" style="margin-top: 15px; margin-bottom: 15px;" id="projects">
     {% for post in site.categories.projects %}
       {% unless forloop.first %}
         <div class="col-sm-4" style="margin-bottom: 15px">

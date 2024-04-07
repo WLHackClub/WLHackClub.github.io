@@ -13,6 +13,34 @@ let idx = lunr(function () {
     }, this);
 });
 
+function get_results(query) {
+    if (!query) {
+        return [];
+    }
+    if (/[*:^~+-]/.test(query)) {
+        try {
+            return idx.search(query);
+        } catch {
+            return [];
+        }
+    }
+
+    let words = query.match(/[^\s,]+/g).map((word) => word.toLowerCase());
+
+    return idx.query((search) => {
+        words.forEach((word) =>
+            search.term(word, {
+                boost: 3,
+            })
+        );
+        search.term(words.at(-1), {
+            boost: 1,
+            wildcard: lunr.Query.wildcard.TRAILING,
+        });
+        return search;
+    });
+}
+
 input.addEventListener("input", () => {
     if (input.value === "") {
         projects.hidden = false;
@@ -22,7 +50,7 @@ input.addEventListener("input", () => {
     projects.hidden = true;
     resultsDiv.hidden = false;
     resultsDiv.innerHTML = "";
-    let results = idx.search(input.value);
+    let results = get_results(input.value);
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
             let ref = results[i]["ref"];

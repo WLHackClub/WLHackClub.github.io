@@ -52,9 +52,14 @@ permalink: /projects/
     </div>
   </div>
 
-  <form onsubmit="return false;">
-    <input class="search-input" placeholder="Search" type="text" id="search">
-  </form>
+  <div class="row">
+    <div class="col-sm-4">
+      <form class="input-group" onsubmit="return false;">
+        <span class="input-group-text" style="background-color: transparent;"><i class="bi bi-search"></i></span>
+        <input class="form-control" placeholder="Search" type="text" id="search">
+      </form>
+    </div>
+  </div>
 
   <div class="row" style="margin-top: 15px; margin-bottom: 15px;" id="search-results" hidden="hidden"></div>
 

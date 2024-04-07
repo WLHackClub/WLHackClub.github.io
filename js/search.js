@@ -5,6 +5,7 @@ let projects = document.getElementById("projects");
 let idx = lunr(function () {
     this.ref("id");
     this.field("title");
+    this.field("date");
     this.field("description");
 
     data.forEach(function (doc) {

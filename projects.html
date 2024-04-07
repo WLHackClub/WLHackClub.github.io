@@ -11,10 +11,10 @@ permalink: /projects/
       {% unless forloop.first %}
         {
           "id": {{ counter }},
-          "title": "{{ post.title | escape }}",
+          "title": "{{ post.title | replace: '"', '&#34;' }}",
           "url": "{{ post.url }}",
           "date": "{{ post.date | date: '%D' }}",
-          "description": "{{ post.description | escape }}",
+          "description": "{{ post.description | replace: '"', '&#34;' }}",
           "tags": [
             {% if post.tags %}
               {% for tag in post.tags %}

@@ -25,10 +25,6 @@ input.addEventListener("input", () => {
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
             let ref = results[i]["ref"];
-            let title = data[ref]["title"];
-            let url = data[ref]["url"];
-            let date = data[ref]["date"];
-            let description = data[ref]["description"];
             let tags_list = data[ref]["tags"];
             let tags = "";
             for (let j = 0; j < tags_list.length; j++) {
@@ -38,11 +34,11 @@ input.addEventListener("input", () => {
                 <div class="col-sm-4" style="margin-bottom: 15px">
                   <div class="card h-100">
                     <div class="card-body d-flex flex-column">
-                      <h5 class="card-title">${title}</h5>
-                      <p class="text-secondary" style="margin-right: 10px;">${date}</p>
+                      <h5 class="card-title">${data[ref]["title"]}</h5>
+                      <p class="text-secondary" style="margin-right: 10px;">${data[ref]["date"]}</p>
                       <div class="card-subtitle" style="margin-bottom: 5px;">${tags}</div>
-                      <p class="card-text overflow-text">${description}</p>
-                      <a href="${url}" class="btn btn-primary mt-auto me-auto">Learn More</a>
+                      <p class="card-text overflow-text">${data[ref]["description"]}</p>
+                      <a href="${data[ref]["url"]}" class="btn btn-primary mt-auto me-auto">Learn More</a>
                     </div>
                   </div>
               </div>

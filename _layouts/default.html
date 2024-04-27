@@ -56,17 +56,28 @@
       </nav>
     </header>
 
-    <main class="page-wrapper" style="margin: 25px">
+    <main class="page-wrapper" style="margin: 25px;">
       {{ content }}
     </main>
 
     <footer class="footer-format bg-body-tertiary">
       <div class="container py-5 col-12 col-md">
         <img src="/assets/icon.svg" alt="WL Hack Club Logo" height="64px">
+        <span class="text-muted" style="float: right;">
+          <a href="https://github.com/WLHackClub/" style="text-decoration: none;" target="_blank">
+            <i class="bi bi-github" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://www.instagram.com/wl_hackclub/" style="text-decoration: none;" target="_blank">
+            <i class="bi bi-instagram" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://discord.gg/5JChnwaEQd" style="text-decoration: none;" target="_blank">
+            <i class="bi bi-discord" style="font-size: 24px;"></i>
+          </a>
+        </span>
         <small class="d-block mb-3 text-muted">&copy; {{ site.time | date: '%Y' }}</small>
         <small class="d-block mb-3 text-muted">
           <a href="/credits">Website Credits</a>
-          <span style="float: right">
+          <span style="float: right;">
             <a href="https://github.com/WLHackClub/WLHackClub.github.io" target="_blank">Source Code</a>
           </span>
         </small>

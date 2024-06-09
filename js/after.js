@@ -11,7 +11,6 @@ document.getElementById("modeButton").addEventListener("click", (event) => {
     document.documentElement.setAttribute(attribute, newState);
 });
 
-let brightnessSlider = document.getElementById("brightnessRange");
-brightnessSlider.addEventListener("input", (event) => {
+document.getElementById("brightnessRange").addEventListener("input", (event) => {
     document.documentElement.style.filter = `brightness(${event.target.value / 100})`;
 });

@@ -15,7 +15,7 @@
 
     <link href="/stylesheets/default.css" rel="stylesheet">
     <script src="/js/load.js"></script>
-    <script src="/js/button.js" defer></script>
+    <script src="/js/after.js" defer></script>
     {% seo title=false %}
   </head>
 
@@ -49,6 +49,22 @@
         </div>
       </nav>
     </header>
+
+    <div class="modal" tabindex="-1" id="brightnessModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Brightness Slider</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+            <label for="brightnessRange" style="vertical-align: 0.30em; padding-right: 5px;">Dark</label>
+            <input type="range" min="0" max="100" value="100" class="slider" id="brightnessRange">
+            <label for="brightnessRange" style="vertical-align: 0.30em; padding-left: 5px;">Bright</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main class="page-wrapper" style="margin: 25px;">
       {{ content }}

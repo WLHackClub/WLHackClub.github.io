@@ -2,14 +2,10 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    color: black;
-    margin-top: auto;
 }
 
 .page-wrapper {
     display: flex;
-    flex-direction: column;
-    flex: 1;
     min-height: 63.5vh;
 }
 

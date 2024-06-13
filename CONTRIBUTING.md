@@ -1,9 +1,5 @@
 # Contributing Guidelines
 
-## Pull Requests
-
-Pull requests will not be accepted or viewed.
-
 ## General Guidelines
 
 ### Naming Conventions

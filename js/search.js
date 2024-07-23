@@ -65,12 +65,12 @@ input.addEventListener("input", () => {
                 tags += `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tags_list[j]["name"]}/${tags_list[j]["name"]}-${tags_list[j]["type"]}.svg" draggable="false" oncontextmenu="return false;" width="32" height="32">\n`;
             }
             results_div.innerHTML += `
-                <div class="col-sm-4" style="margin-bottom: 15px">
+                <div class="col-sm-4 mb-3">
                   <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title">${data[ref]["title"]}</h5>
-                      <p class="text-secondary" style="margin-right: 10px;">${data[ref]["date"]}</p>
-                      <div class="card-subtitle" style="margin-bottom: 5px;">${tags}</div>
+                      <p class="text-secondary mr-1">${data[ref]["date"]}</p>
+                      <div class="card-subtitle mb-1">${tags}</div>
                       <p class="card-text overflow-text">${data[ref]["description"]}</p>
                       <a href="${data[ref]["url"]}" class="btn btn-primary mt-auto me-auto">Learn More</a>
                     </div>

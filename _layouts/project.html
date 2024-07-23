@@ -7,7 +7,7 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
-  <div style="margin-top: 5px; margin-bottom: 5px;">
+  <div class="my-1">
     {% if page.tags %}
       {% for tag in page.tags %}
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ tag }}/{{ tag }}-{% if site.data.devicons[tag] %}{{ site.data.devicons[tag] }}{% else %}{{ 'original' }}{% endif %}.svg" draggable="false" width="32" height="32">
@@ -15,12 +15,12 @@ layout: default
     {% endif %}
   </div>
 
-  <div style="margin-bottom: 16px">
+  <div class="mb-2">
     {{ page.description }}
   </div>
 
   {% if page.code_url %}
-    <a href="{{ page.code_url }}" class="btn btn-primary" target="_blank" style="margin-right: 5px">
+    <a href="{{ page.code_url }}" class="btn btn-primary me-1" target="_blank">
       <i class="bi bi-code-slash"></i>
       Source Code
     </a>

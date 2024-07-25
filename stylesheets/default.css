@@ -1,14 +1,3 @@
-.footer-format {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.page-wrapper {
-    display: flex;
-    min-height: 63.5vh;
-}
-
 .bi {
     vertical-align: 0.125em;
 }

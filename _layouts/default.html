@@ -19,8 +19,8 @@
     {% seo title=false %}
   </head>
 
-  <body>
-    <header class="site-header sticky-top">
+  <body class="d-flex flex-column min-vh-100">
+    <header>
       <nav class="navbar bg-body-tertiary navbar-expand-lg sticky-top p-1">
         <a class="navbar-brand px-2 text-primary" href="{{ site.url }}">
           <img src="/assets/icon.svg" alt="WL Hack Club Logo" height="36px">
@@ -66,11 +66,11 @@
       </div>
     </div>
 
-    <main class="page-wrapper m-4">
+    <main class="container p-4">
       {{ content }}
     </main>
 
-    <footer class="footer-format bg-body-tertiary">
+    <footer class="footer mt-auto bg-body-tertiary">
       <div class="container py-5 col-12 col-md">
         <img src="/assets/icon.svg" alt="WL Hack Club Logo" height="64px">
         <span class="text-muted float-end">

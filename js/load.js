@@ -3,8 +3,8 @@ const getSystemDefaults = () => {
         return "dark";
     }
     return "light";
-}
+};
 
-const getTheme = localStorage.getItem("theme") ?? getSystemDefaults()
+const getTheme = localStorage.getItem("theme") ?? getSystemDefaults();
 
 addEventListener("DOMContentLoaded", document.documentElement.setAttribute("data-bs-theme", getTheme));

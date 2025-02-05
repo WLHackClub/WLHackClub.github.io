@@ -5,3 +5,6 @@ _site
 vendor
 
 node_modules
+
+# some random mac stuff idk
+**/.DS_Store

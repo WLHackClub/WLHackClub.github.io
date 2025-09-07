@@ -16,6 +16,24 @@
     <link href="/stylesheets/default.css" rel="stylesheet">
     <script src="/js/load.js"></script>
     <script src="/js/after.js" defer></script>
+    
+    {%- if page.meta_description -%}
+    <meta name="description" content="{{ page.meta_description }}">
+    {%- endif -%}
+
+    {%- if page.favicon -%}
+    <link rel="shortcut icon" href="{{ page.favicon }}">
+    {%- endif -%}
+
+    {%- if page.extra_css -%}
+      {%- for href in page.extra_css -%}
+      <link rel="stylesheet" href="{{ href }}">
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if page.extra_head -%}
+      {{ page.extra_head }}
+    {%- endif -%}
     {% seo title=false %}
   </head>
 
@@ -42,7 +60,11 @@
             <li class="nav-item item">
               <a class="nav-link text-primary" href="/projects">Projects</a>
             </li>
-          </ul>
+          
+            <li class="nav-item item">
+              <a class="nav-link text-primary {% if page.url == '/hackathon/' %}fw-bold{% endif %}" href="{{ site.baseurl | default: '' }}/hackathon/">Hackathon</a>
+            </li>
+</ul>
           <button class="nav-item btn me-1 border border-0" id="modeButton">
             <h5><i class="bi bi-brightness-high-fill" style="vertical-align: -0.125em;"></i></h5>
           </button>

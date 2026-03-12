@@ -9,17 +9,17 @@ form_link: https://forms.gle/qWWufJg5YgcJc4Gs5
 <div class="position-relative p-4 p-md-5 m-md-3 text-center rounded-3 border top-bar" style="background-color:#313131;">
   <div class="col-lg-6 mx-auto pt-4 pb-2">
     <div class="d-flex flex-column align-items-center gap-3">
-      <h1 class="display-1 fw-bold" style="color:#FC4C3D;">Hoosier Hacks 6.0</h1>
+      <h1 class="display-1 fw-bold" style="color:#FC4C3D;">Hoosier Hacks 7.0</h1>
       <p class="lead fst-italic text-white mb-0">Build. Code. Innovate.</p>
-      <p class="lead fw-normal text-white mb-0">Sunday, October 26th, 2025</p>
+      <p class="lead fw-normal text-white mb-0">Sunday, October 25th, 2026</p>
       <p class="lead fw-normal text-white mb-0">West Lafayette Jr./Sr. High School</p>
       <a
-        href="https://forms.gle/TB9wvQf9vGsTp6kL8"
+        href="{{ page.form_link }}"
         target="_blank"
         rel="noopener"
         class="btn btn-lg mt-4 mb-0"
         style="background-color:#FC4C3D;border-color:#FC4C3D;color:#fff;">
-        Signups closed - Thank you for a great event!
+        Register for Hoosier Hacks 7.0
       </a>
     </div>
   </div>
@@ -49,7 +49,7 @@ form_link: https://forms.gle/qWWufJg5YgcJc4Gs5
       </tbody>
       <tbody>
         <td>Time</td>
-        <td>Sunday, October 26th, 10 am - 6 pm</td>
+        <td>Sunday, October 25th, 2026, 10 am - 6 pm</td>
       </tbody>
       <tbody>
         <td>Grades</td>
@@ -144,7 +144,7 @@ form_link: https://forms.gle/qWWufJg5YgcJc4Gs5
 <div class="p-3 p-md-5 m-md-3 mb-md-4 bg-light rounded-3 border" id="signup">
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold text-center">Sign Up Here!</h1>
-    <p class="fs-4 text-center">You can use our form link <a href="https://forms.gle/TB9wvQf9vGsTp6kL8">here</a> or use this QR Code to share with your friends!</p>
+    <p class="fs-4 text-center">You can use our form link <a href="{{ page.form_link }}">here</a> or use this QR Code to share with your friends!</p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ page.form_link }}" alt="signup" class="d-block mx-auto">
   </div>
 </div>
